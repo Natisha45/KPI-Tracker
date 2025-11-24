@@ -1,5 +1,5 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <script>
+ 
         // Global data storage
         const appData = {
             kpiData: [
@@ -367,4 +367,5 @@
 
         // Call this when the page loads
         window.onload = initializeApp;
-    </script>
+
+
