@@ -856,7 +856,7 @@
                 
                 let achievementClass = 'achievement-low';
                 if (item.achievement >= 50) achievementClass = 'achievement-medium';
-                if (item.achievement >= 85) achievementClass = 'achievement-high';
+                if (item.achievement > 85) achievementClass = 'achievement-high';
 
                 row.innerHTML = `
                     <td class="kpi-highlight col-manager">${item.manager}</td>
@@ -922,7 +922,7 @@
                 if (item.target === 0) return;
                 
                 const achievement = (item.actual / item.target) * 100;
-                let barColor = achievement >= 85 ? '#2ecc71' : achievement >= 50 ? '#f39c12' : '#e74c3c';
+                let barColor = achievement > 85 ? '#2ecc71' : achievement >= 50 ? '#f39c12' : '#e74c3c';
                 
                 const progressItem = document.createElement('div');
                 progressItem.className = 'progress-item';
@@ -3828,6 +3828,7 @@
  -->
  -->
  -->
+
 
 
 
