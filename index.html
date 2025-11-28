@@ -855,8 +855,8 @@
                 const row = document.createElement('tr');
                 
                 let achievementClass = 'achievement-low';
-                if (item.achievement >= 60) achievementClass = 'achievement-medium';
-                if (item.achievement >= 80) achievementClass = 'achievement-high';
+                if (item.achievement >= 50) achievementClass = 'achievement-medium';
+                if (item.achievement >= 85) achievementClass = 'achievement-high';
 
                 row.innerHTML = `
                     <td class="kpi-highlight col-manager">${item.manager}</td>
@@ -922,7 +922,7 @@
                 if (item.target === 0) return;
                 
                 const achievement = (item.actual / item.target) * 100;
-                let barColor = achievement >= 80 ? '#2ecc71' : achievement >= 60 ? '#f39c12' : '#e74c3c';
+                let barColor = achievement >= 85 ? '#2ecc71' : achievement >= 50 ? '#f39c12' : '#e74c3c';
                 
                 const progressItem = document.createElement('div');
                 progressItem.className = 'progress-item';
@@ -945,15 +945,15 @@
             graphLegend.innerHTML = `
                 <div class="legend-item">
                     <div class="legend-color" style="background-color: #2ecc71;"></div>
-                    <span>High Achievement (≥80%)</span>
+                    <span>High Achievement (>85%)</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background-color: #f39c12;"></div>
-                    <span>Medium Achievement (60-79%)</span>
+                    <span>Medium Achievement (50-85%)</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background-color: #e74c3c;"></div>
-                    <span>Low Achievement (<60%)</span>
+                    <span>Low Achievement (<50%)</span>
                 </div>
             `;
         }
@@ -3828,6 +3828,7 @@
  -->
  -->
  -->
+
 
 
 
